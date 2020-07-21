@@ -45,4 +45,5 @@ names(Tdata)<-gsub("gravity", "Gravity", names(Tdata))
 
 Fdata <- Tdata %>%
   group_by(subject, activity) %>% summarise_all(funs(mean))
+#Step6________tidy data stored in Fdata.txt
 write.table(Fdata, "Fdata.txt", row.name=FALSE)
